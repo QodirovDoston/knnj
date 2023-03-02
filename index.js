@@ -4,17 +4,23 @@ const cors = require("cors");
 
 app.use(cors())
 
-app.get("/doston", (req, res) => {
+app.get("/doston/demo", (req, res) => {
     res.json({
         name: "Qodirov Doston",
         image: "https://miro.medium.com/max/1400/1*mYTQe3aP6IxOVqFiy2C6qw.jpeg",
         username: "Doston",
-        email: "qodirovdoston806@gmail.com",
-        tel: +99899-321-39-40,
-
+        email: "qodirovdoston806@gmail.com"
     })
 });
-const PORT = 3004;
+
+app.get("/", (req, res) => {
+    res.send({
+        message: "Hello I'm Doston"
+    })
+});
+
+
+const PORT = 3000;
 
 app.listen(PORT, () => {
     
